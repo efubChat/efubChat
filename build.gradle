@@ -29,6 +29,16 @@ dependencies {
 	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testImplementation 'org.springframework.amqp:spring-rabbit-test'
+	developmentOnly 'org.springframework.boot:spring-boot-devtools'
+
+	implementation group: 'com.fasterxml.jackson.datatype', name: 'jackson-datatype-jsr310', version: '2.12.4'
+	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+
+	implementation 'org.webjars:stomp-websocket:2.3.4'
+	implementation 'org.springframework.boot:spring-boot-starter-reactor-netty:2.6.4'
+	implementation 'com.fasterxml.jackson.core:jackson-databind:2.13.1'
+	implementation 'org.webjars:sockjs-client:1.5.1'
+	implementation 'org.springframework.boot:spring-boot-starter-amqp:2.6.4'
 }
 
 tasks.named('test') {
