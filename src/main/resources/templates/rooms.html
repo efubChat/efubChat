@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>hello</title>
+</head>
+
+
+<body>
+<div class="container">
+
+    <div class="col-6">
+        <label><b>채팅방</b></label>
+    </div>
+
+    <form th:action="@{/chat/room}" method="get">
+        <input type="text" name="chatRoomId" class="form-control">
+        <input type="text" name="nickname" class="form-control">
+        <button class="btn btn-secondary">참여하기</button>
+    </form>
+
+</div>
+</body>
+
+</html>
