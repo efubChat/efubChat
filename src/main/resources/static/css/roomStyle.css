@@ -33,6 +33,27 @@ body {
 
 }
 
+.enter {
+    font-family: "Apple Symbols";
+    font-size: 20px;
+    font-weight: bold;
+    align-items: center;
+    text-align: center;
+}
+
+.enterChat {
+    display: flex;
+    flex-direction: row;
+    text-align: right;
+    align-items: center;
+}
+
+.enterInput{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
 .mine {
     display: flex;
     flex-direction: row;
@@ -145,7 +166,7 @@ form-control:focus {
     cursor: pointer;
 }
 
-.btn {
+.btn-back {
     border: none;
     color: white;
     font-size: 18px;
@@ -173,6 +194,11 @@ form-control:focus {
     height: 18px;
     position: relative;
     padding: 0px;
+}
+
+.btn-enter {
+    margin-bottom:  15px;
+    font-size: 20px;
 }
 
 .icondiv {
