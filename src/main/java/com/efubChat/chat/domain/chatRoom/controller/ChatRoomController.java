@@ -15,6 +15,11 @@ public class ChatRoomController {
         return "rooms";
     }
 
+    @GetMapping("/chats")
+    public String getChats(){
+        return "chats";
+    }
+
     @GetMapping(value = "/room")
     public String getRoom(Long chatRoomId, String nickname, Model model){
         model.addAttribute("chatRoomId", chatRoomId);

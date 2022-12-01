@@ -35,7 +35,6 @@ public class StompRabbitController {
     @MessageMapping("chat.message.{chatRoomId}")
     public void send(ChatDto chat, @DestinationVariable String chatRoomId){
         chat.setRegisterDate(LocalDateTime.now());
-
         //template.convertAndSend(CHAT_EXCHANGE_NAME, "room." + chatRoomId, chat);
         //template.convertAndSend( "room." + chatRoomId, chat);
         template.convertAndSend("amq.topic", "room." + chatRoomId, chat);

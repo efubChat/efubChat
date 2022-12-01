@@ -2,24 +2,48 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 
 <head>
-    <title>hello</title>
+    <meta charset="UTF-8">
+    <title>Efub Chat</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" th:href="@{/css/roomStyle.css}">
+    <link rel="stylesheet" href="../static/css/roomStyle.css">
 </head>
-
-
 <body>
-<div class="container">
 
-    <div class="col-6">
-        <label><b>채팅방</b></label>
+<div class="wrapper">
+    <div class="main enter">
+        <h3 class="mt-3">EFUB CHAT</h3>
+        <form th:action="@{/chat/room}" method="get" class="justify-content-between">
+            <div class="row px-2 mt-5">
+                <div class="col">
+                    <span>ROOM NO</span>
+                </div>
+                <div class="col">
+                    <input type="text" name="chatRoomId" class="form-control enterInput">
+                </div>
+            </div>
+            <div class="row px-2 mt-2">
+                <div class="col">
+                    <span>NICKNAME</span>
+                </div>
+                <div class="col">
+                    <input type="text" name="nickname" class="form-control enterInput">
+                </div>
+            </div>
+            <div class="row px-2 mt-5">
+                <div class="col">
+                    <button class="btn btn-secondary btn-enter">ENTER</button>
+                </div>
+            </div>
+        </form>
     </div>
-
-    <form th:action="@{/chat/room}" method="get">
-        <input type="text" name="chatRoomId" class="form-control">
-        <input type="text" name="nickname" class="form-control">
-        <button class="btn btn-secondary">참여하기</button>
-    </form>
-
 </div>
+
 </body>
 
 </html>
